@@ -7,6 +7,6 @@ app.get("/", (c) => {
   return c.text("Hello Hono!");
 });
 
-app.route("/ap1/v1/users", apiV1Users);
+app.route("/api/v1/users", apiV1Users);
 
 export default app;
