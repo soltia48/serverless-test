@@ -10,6 +10,6 @@ export const apiV1Users = new Hono<{ Bindings: Bindings }>();
 
 apiV1Users.get("/", async (c) => {
   const prisma = getPrisma(c);
-  let users = await prisma.user.findMany();
+  const users = await prisma.user.findMany();
   return c.json(users);
 });
